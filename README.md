@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1><a href="https://ui-lib.com/downloads/matx-react-dashboard/">Matx React Material Design Admin Dashboard Template</a></h1>
 
 <a href="https://matx-react-free.netlify.app/">
@@ -184,3 +185,6 @@ Your app is ready to be deployed!</p>
 Download From <a href="https://ui-lib.com/downloads/matx-react-dashboard/">official website</a>
 
 <h3>For questions and support mail us at <a href="mailto:support@ui-lib.com">support@ui-lib.com</a></h3>
+=======
+# chord
+>>>>>>> f733721cb8757f85a4b3df92c3640d4f7978bee3
