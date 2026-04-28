@@ -102,7 +102,7 @@ export default function NotificationBar({ container }) {
               <h5>Notifications</h5>
             </Notification>
 
-            {notifications?.map((notification) => (
+            {Array.isArray(notifications) && notifications?.map((notification) => (
               <NotificationCard key={notification.id}>
                 <DeleteButton
                   size="small"

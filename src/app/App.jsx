@@ -1,26 +1,20 @@
-import { useRoutes } from "react-router-dom";
-import CssBaseline from "@mui/material/CssBaseline";
-// ROOT THEME PROVIDER
-import { MatxTheme } from "./components";
-// ALL CONTEXTS
-import SettingsProvider from "./contexts/SettingsContext";
-import { AuthProvider } from "./contexts/FirebaseAuthContext";
-// ROUTES
-import routes from "./routes";
-// FAKE SERVER
-import "../__api__";
+import React, { Suspense } from "react";
+import { RouterProvider} from "react-router-dom";
+import { Provider } from 'react-redux';
+import store, { persistor }   from '../app/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { routesConfig } from './routes';
 
-export default function App() {
-  const content = useRoutes(routes);
 
+function App() {
   return (
-    <SettingsProvider>
-      <AuthProvider>
-        <MatxTheme>
-          <CssBaseline />
-          {content}
-        </MatxTheme>
-      </AuthProvider>
-    </SettingsProvider>
+    <Provider store={store}>
+      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RouterProvider router={routesConfig} />  
+        </Suspense>
+      </PersistGate>
+    </Provider>
   );
 }
+export default App;

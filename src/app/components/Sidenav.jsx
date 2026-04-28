@@ -3,7 +3,7 @@ import Scrollbar from "react-perfect-scrollbar";
 import styled from "@mui/material/styles/styled";
 
 import { MatxVerticalNav } from "app/components";
-import useSettings from "app/hooks/useSettings";
+import useSettings from "../hooks/useSettings";
 import navigations from "app/navigations";
 
 // STYLED COMPONENTS

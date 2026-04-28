@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Icon from "@mui/material/Icon";
 import ButtonBase from "@mui/material/ButtonBase";
-import styled from "@mui/material/styles/styled";
+import { styled } from "@mui/material/styles";
 
-import useSettings from "app/hooks/useSettings";
+import useSettings from "../../hooks/useSettings";
 import { Paragraph, Span } from "../Typography";
 import MatxVerticalNavExpansionPanel from "./MatxVerticalNavExpansionPanel";
 
