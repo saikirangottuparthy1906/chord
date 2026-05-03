@@ -1,3 +1,19 @@
+import  store  from '../app/store';
+const latestState = store.getState(); // Accessible in any JS file
+const userMenuDetails = latestState.auth.userInfo?.usermodules || {};
+const menuDetails = Object.keys(userMenuDetails).map((userMenu) => 
+  ({ 
+    name: userMenu,
+    icon: "",
+    children: userMenuDetails[userMenu].map((item) => ({
+      name: item.pagecaption,
+      path: "/login",
+      iconText: "A" })),    
+  }));
+console.log("userDetails", userMenuDetails);
+console.log("menuDetails", menuDetails);
+
+
 const navigations = [
   { name: "Dashboard", path: "/dashboard/default", icon: "dashboard" },
   { label: "PAGES", type: "label" },
@@ -38,6 +54,7 @@ const navigations = [
     icon: "trending_up",
     children: [{ name: "Echarts", path: "/charts/echarts", iconText: "E" }]
   },
+  ...menuDetails,
   {
     name: "Documentation",
     icon: "launch",

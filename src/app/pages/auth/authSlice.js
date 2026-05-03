@@ -6,6 +6,7 @@ const authSlice = createSlice({
     userInfo: null,
     token: null,
     loading: false,
+    isAuthenticated: false,
   },
 
   reducers: {
@@ -17,6 +18,7 @@ const authSlice = createSlice({
       state.loading = false;
       state.token = action.payload.access_token;
       state.userInfo = action.payload.userInfo;
+      state.isAuthenticated = true;
     },
     loginFailure: (state) => {
       state.loading = false;

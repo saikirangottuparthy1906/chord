@@ -44,7 +44,7 @@ const Logout = lazy(() => import("../app/pages/auth/logout"));
 const Dashboard = lazy(() => import("../app/pages/home/dashboard"));
 const ProtectedRoute = ({ children }) => {
   //const token = localStorage.getItem("token"); // or Redux
-  const token = useSelector((state) => state.auth.token)
+  const token = useSelector((state) => state.auth?.token) || localStorage.getItem("token");
   if (!token) {
     return <Navigate to="/login" replace />;
   }

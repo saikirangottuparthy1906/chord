@@ -86,7 +86,7 @@ const Layout1Topbar = () => {
   const { settings, updateSettings } = useSettings();
   const { logout, xxuser } = useAuth();
   const user = useSelector((state) => state.auth.userInfo);
-
+  //console.log("user", user);
   const isMdScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const updateSidebarMode = (sidebarSettings) => {

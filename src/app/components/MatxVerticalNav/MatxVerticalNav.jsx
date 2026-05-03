@@ -132,7 +132,7 @@ export default function MatxVerticalNav({ items }) {
                   ? `navItemActive ${mode === "compact" && "compactNavItem"}`
                   : `${mode === "compact" && "compactNavItem"}`
               }>
-              <ButtonBase key={item.name} name="child" sx={{ width: "100%" }}>
+              cccc<ButtonBase key={item.name} name="child" sx={{ width: "100%" }}> 
                 {item?.icon ? (
                   <Icon className="icon" sx={{ width: 36 }}>
                     {item.icon}
